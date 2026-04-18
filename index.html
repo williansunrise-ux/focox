@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Foco_X | Prompts Premium</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 520px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(59,130,246,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(59,130,246,0.4);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    resize: none;
+    font-size: 13px;
+}
+
+button {
+    margin-top: 12px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #3b82f6;
+}
+
+.counter {
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>FOCO_X 🚀</h1>
+    <div class="subtitle">Prompts Premium • Nível Profissional</div>
+
+    <div class="card">
+        <h3>Prompt 1</h3>
+        <textarea id="p1">Create luxury commercial advertising lighting.
+
+Add subtle reflections, premium contrast and controlled highlights.
+
+Do not alter product design or colors.</textarea>
+        <button onclick="copyText('p1','c1')">COPIAR</button>
+        <div class="counter">Copiado: <span id="c1">0</span>x</div>
+    </div>
+
+    <div class="card">
+        <h3>Prompt 2</h3>
+        <textarea id="p2">Maintain 100% of the original image composition, background, framing and elements.
+
+Enhance product sharpness, micro-details and texture clarity.
+
+Improve overall image resolution to ultra high definition (4K/8K look).
+
+Apply refined commercial lighting enhancement only on the product, increasing brightness, gloss and premium finish.
+
+Add subtle controlled highlights and natural reflections to elevate realism.
+
+Boost contrast and dynamic range while preserving original colors faithfully.
+
+Do not alter product design, shape, proportions, colors or positioning.
+
+Do not change background, scenario, objects or depth of field.
+
+Ensure a highly realistic, professional commercial photography finish.</textarea>
+        <button onclick="copyText('p2','c2')">COPIAR</button>
+        <div class="counter">Copiado: <span id="c2">0</span>x</div>
+    </div>
+
+    <div class="footer">
+        © FOCO_X • @seuinstagram
+    </div>
+</div>
+
+<script>
+function copyText(id, counterId) {
+    var text = document.getElementById(id);
+    text.select();
+    document.execCommand("copy");
+
+    let counter = document.getElementById(counterId);
+    counter.innerText = parseInt(counter.innerText) + 1;
+
+    alert("Copiado com sucesso 🚀");
+}
+</script>
+
+</body>
+</html>
